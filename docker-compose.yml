@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - .:/media
-      - /mnt/SSDa/kinetics-400/:/data/kinetics-400/
+      - /mnt/SSDa/kinetics400/:/data/kinetics400/
     container_name: ydl
     tty: true
 
