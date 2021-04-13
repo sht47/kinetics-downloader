@@ -1,0 +1,13 @@
+version: '3'
+# rsd is abbreviation of resource downloader 
+services:
+  rsd:
+    build: 
+      context: .
+      dockerfile: Dockerfile.resource
+    volumes:
+      - ./sh_prepare/:/media/sh_prepare/
+      - /mnt/SSDa/kinetics-400/:/data/kinetics-400/
+    container_name: rsd
+    tty: true
+

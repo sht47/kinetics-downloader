@@ -4,6 +4,18 @@ Download all videos from DeepMind's [Kinetics dataset](https://deepmind.com/rese
 Moreover, you can use this library to extract **frames** and **sound track** from videos, generate metadata for training
 and pack all sound tracks into a single **tfrecords** file for faster reading.
 
+## Docker environment 
+
+### Save Resource of Kinetics
+```
+docker-compose -f ./docker-compose-resource.yml up -d  --build
+```
+
+### Save Video 
+```
+docker-compose up -d --build
+```
+
 ## Requirements
 
 * Python >= 3.4
@@ -158,6 +170,8 @@ The videos are all download in mp4. If a video isn't available in mp4, it's down
 Videos' file names correspond to their YouTube IDs. All spaces in directory names are replaced with
 underscores (e.g. blowing glass => blowing_glass).
 
+
+
 ## Contributors
 
 * [Ondrej Biza](https://github.com/ondrejba)
@@ -169,3 +183,5 @@ The sound to tfrecords script is based on [this tutorial](http://warmspringwinds
 ## References
 
 * [[1] The Kinetics Human Action Video Dataset - W.Kay et al. (2017)](https://arxiv.org/abs/1705.06950)
+
+

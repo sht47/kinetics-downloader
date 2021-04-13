@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ydl:
+    build: .
+    volumes:
+      - .:/media
+      - /mnt/SSDa/kinetics-400/:/data/kinetics-400/
+    container_name: ydl
+    tty: true
+
